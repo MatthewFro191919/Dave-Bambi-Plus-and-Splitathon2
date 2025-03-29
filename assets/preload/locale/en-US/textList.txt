@@ -337,17 +337,34 @@ unfairness_sub5==Look!
 unfairness_sub6==I'm not kidding this is...
 unfairness_sub7==Fucking real!
 
-//Importumania Subtitles//
-importumania_sub1==Kidding!
-importumania_sub2==I...
-importumania_sub3==Paint...
+//Importumania Old Subtitles//
+importumania_old_sub1==Kidding!
+importumania_old_sub2==I...
+importumania_old_sub3==Paint...
 importumania_sub4==This one two hours I painting.
-importumania_sub5==Look!
-importumania_sub6==I'm not kidding this is...
-importumania_sub7==Fucking real!
-importumania_sub8==YOU FUCKING LIES...
-importumania_sub9==MOLDY!!!!!!!
-importumania_sub10==I FUCKING KNEW IT!
+importumania_old_sub5==Look!
+importumania_old_sub6==I'm not kidding this is...
+importumania_old_sub7==Fucking real!
+importumania_old_sub8==YOU FUCKING LIES...
+importumania_old_sub9==MOLDY!!!!!!!
+importumania_old_sub10==I FUCKING KNEW IT!
+
+//Importumania Subtitles//
+importumania_sub1==YOU FUCKING LIAR MOLDY
+importumania_sub2==I FUCKING KNEW IT!
+importumania_sub4==MOLDY!!!!!!!
+importumania_sub5==OH MY GOD
+importumania_sub5==*gibberish*
+importumania_sub6==Ok *gibberish*
+importumania_sub7==Kidding!
+importumania_sub8==I...
+importumania_sub9==Paint...
+importumania_sub10==This one two hours I painting.
+importumania_sub11==Look!
+importumania_sub12==I'm not kidding this is...
+importumania_sub13==Fucking real!
+importumania_sub14==*gibberish*
+
 
 //Vs Dave Rap Subtitles//
 daverap_sub1==VS Dave, is kinda poopoo
