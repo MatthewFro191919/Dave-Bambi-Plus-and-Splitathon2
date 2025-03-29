@@ -1292,6 +1292,24 @@ class Character extends FlxSprite
 				setGraphicSize(Std.int((width * 1.3) / furiosityScale));
 
 				playAnim('idle');
+			case 'True_Expunged':
+				frames = Paths.getSparrowAtlas('characters/True_Expunged', 'shared');
+
+				animation.addByPrefix('idle', 'idle', 24, false);
+				for (anim in ['left', 'down', 'up', 'right'])
+				{
+					animation.addByPrefix('sing${anim.toUpperCase()}', anim, 24, false);	
+				}
+				loadOffsetFile(curCharacter);
+				
+				globalOffset = [-85, -272];
+				barColor = FlxColor.fromRGB(49, 176, 209);
+
+				playAnim('idle');
+				antialiasing = false;
+				nativelyPlayable = true;
+				flipX = true;
+
 			case 'expunged':
 				// EXPUNGED SHITE ANIMATION LOADING CODE
 				frames = Paths.getSparrowAtlas('expunged/ExpungedFinal', 'shared');

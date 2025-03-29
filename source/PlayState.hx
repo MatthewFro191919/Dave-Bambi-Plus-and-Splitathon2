@@ -342,6 +342,10 @@ class PlayState extends MusicBeatState
 	var daveHouseDream:Array<FlxSprite> = [];
 	var tristanHouseDream:Array<FlxSprite> = [];
 
+	var 3dFarmDream1:Array<FlxSprite> = [];
+	var 3dFarmDream2:Array<FlxSprite> = [];
+	var 3dFarmDream3:Array<FlxSprite> = [];
+
 
 	//bg stuff
 	var baldi:BGSprite;
@@ -1617,6 +1621,30 @@ class PlayState extends MusicBeatState
 					preload('california/$spr');
 				}
 			case 'importumania':
+				preload('backgrounds/importumania/ImportSkyBam');
+				preload('backgrounds/importumania/ImportShapesBam');
+				preload('backgrounds/importumania/Import_BamPlat');
+				preload('backgrounds/importumania/Importumania_SkyDave');
+				preload('backgrounds/importumania/Importumania_ShapesDave');
+				preload('backgrounds/importumania/Importumania_PlatformDave');
+				preload('backgrounds/importumania/Importumania_SkyTristan');
+				preload('backgrounds/importumania/Importumania_ShapesTristan');
+				preload('backgrounds/importumania/Importumania_PlatformTristan');
+				preload('backgrounds/importumania/Importumania_SkyCheating');
+				preload('backgrounds/importumania/Importumania_ShapesCheating');
+				preload('backgrounds/importumania/Importumania_PlatformCheating');
+				preload('backgrounds/importumania/Importumania_SkyUnfairness');
+				preload('backgrounds/importumania/Importumania_ShapesUnfairness');
+				preload('backgrounds/importumania/Importumania_PlatformUnfairness');
+				preload('backgrounds/importumania/Importumania_SkyDave3D');
+				preload('backgrounds/importumania/Importumania_ShapesDave3D');
+				preload('backgrounds/importumania/Importumania_PlatformDave3D');
+				preload('backgrounds/importumania/Importumania_SkyExpunged');
+				preload('backgrounds/importumania/Importumania_ShapesExpunged');
+				preload('backgrounds/importumania/Importumania_PlatformExpunged');
+				preload('characters/3d_bf');
+				preload('characters/3d_gf');
+			case 'old-importumania':
 				preload('backgrounds/farm/gm_flatgrass');
 				preload('backgrounds/farm/orangey hills');
 				preload('backgrounds/farm/funfarmhouse');
@@ -1834,7 +1862,7 @@ class PlayState extends MusicBeatState
 			dad.alpha = 0;
 		}
 			
-		if (SONG.song.toLowerCase() == "importumania")
+		if (SONG.song.toLowerCase() == "old-importumania")
 		{
 			dad.alpha = 0;
 			boyfriend.alpha = 0;
@@ -2829,6 +2857,109 @@ class PlayState extends MusicBeatState
 			}
 			if (SONG.song.toLowerCase() == "importumania") // Bambi
 			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/ImportSkyBam', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.1));
+				bambiFarmDream.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/ImportShapesBam', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				bambiFarmDream.push(Shapes);
+						
+				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Import_BamPlat', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				bambiFarmDream.push(Platform);
+			}
+			if (SONG.song.toLowerCase() == "importumania") // Dave
+			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyDave', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.1));
+				daveHouseDream.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesDave', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				daveHouseDream.push(Shapes);
+						
+				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformDave', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				daveHouseDream.push(Platform);
+			}
+			if (SONG.song.toLowerCase() == "importumania") // Tristan
+			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyTristan', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.1));
+				daveHouseDream.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesTristan', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				daveHouseDream.push(Shapes);
+						
+				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformTristan', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				daveHouseDream.push(Platform);
+			}
+			if (SONG.song.toLowerCase() == "importumania") // 3d Bambi
+			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyCheating', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.1));
+				3dFarmDream1.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesCheating', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				3dFarmDream1.push(Shapes);
+						
+				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformCheating', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				3dFarmDream1.push(Platform);
+			}
+			if (SONG.song.toLowerCase() == "importumania") // 3d Bambi (Unfairness)
+			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyUnfairness', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.1));
+				3dFarmDream2.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesUnfairness', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				3dFarmDream2.push(Shapes);
+						
+				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformUnfairness', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				3dFarmDream2.push(Platform);
+			}
+
+			if (SONG.song.toLowerCase() == "importumania") // Expunged True Form
+			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyExpunged', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.2, Sky.hight * 3));
+				3dFarmDream3.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_PlatformExpunged', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				3dFarmDream3.push(Shapes);
+						
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyUnfairness', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				3dFarmDream3.push(Platform);
+			}
+                        if (SONG.song.toLowerCase() == "old-importumania") // Bambi
+			{
 				var flatgrass:BGSprite = new BGSprite('flatgrass', 350, 75, Paths.image('backgrounds/farm/gm_flatgrass'), null, 0.65, 0.65);
 				flatgrass.setGraphicSize(Std.int(flatgrass.width * 0.34));
 				flatgrass.updateHitbox();
@@ -2874,7 +3005,7 @@ class PlayState extends MusicBeatState
 				bambiFarmDream.push(sign);
 				sign.visible = false;
 			}
-			if (SONG.song.toLowerCase() == "importumania") // Dave
+			if (SONG.song.toLowerCase() == "old-importumania") // Dave
 			{
 				var assetType:String = '';
 		
@@ -2898,7 +3029,7 @@ class PlayState extends MusicBeatState
 				daveHouseDream.push(stageFront);
 				stageFront.visible = false;
 			}
-			if (SONG.song.toLowerCase() == "importumania") // Tristan
+			if (SONG.song.toLowerCase() == "old-importumania") // Tristan
 			{
 				var bg:BGSprite = new BGSprite('bg', -1000, -350, Paths.image('backgrounds/inside_house'), null);
 				sprites.add(bg);
@@ -2906,6 +3037,12 @@ class PlayState extends MusicBeatState
 				tristanHouseDream.push(bg);
 				bg.visible = false;
 			}
+
+			if (SONG.song.toLowerCase() == "importumania") {
+		        	voidShader(Sky);
+		        	voidShader(Shapes);
+                        }
+
 		if (!revertedBG)
 		{
 			defaultCamZoom = bgZoom;
@@ -10529,6 +10666,469 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(black, {alpha: 0.6}, 1);
 					}
 				case 'importumania':
+					switch (curStep)
+					{
+						// Bambi
+						case 1:
+							iconP2.alpha = 0;
+							iconP1.alpha = 0;
+							switchDad('bambi-angey', dad.getPosition(), false);
+							dad.alpha = 0;
+						case 128:
+							for (sprite in bambiFarmDream)
+							{
+								sprite.visible = true;
+							}
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+							dad.y += 370;
+							dad.x += 200;
+	
+							trace("Bambi Farm");
+						case 160:
+							FlxTween.tween(dad, {alpha: 1}, 5);
+							FlxTween.tween(iconP2, {alpha: 1}, 5);
+						case 179:
+							FlxTween.tween(gf, {alpha: 1}, 5);
+						case 192:
+							FlxTween.tween(boyfriend, {alpha: 1}, 5);
+							FlxTween.tween(iconP1, {alpha: 1}, 5);
+						case 256 | 1664:
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+						case 1344:
+							FlxTween.tween(dad, {alpha: 0}, 6);
+							FlxTween.tween(iconP2, {alpha: 0}, 6);
+						case 1408:
+							black = new FlxSprite().makeGraphic(FlxG.width * 5, FlxG.height * 5, FlxColor.BLACK);
+							black.screenCenter();
+							black.alpha = 0;
+							add(black);
+							FlxTween.tween(black, {alpha: 5}, 1);
+							makeInvisibleNotes(true);
+							FlxTween.tween(camHUD, {alpha: 0}, 5);
+						case 1521:
+							for (sprite in bambiFarmDream)
+							{
+								sprite.visible = false;
+							}
+							trace("Bambi Farm is just a dream...");
+						// Dave
+						case 1536:
+							for (sprite in daveHouseDream)
+								{
+									sprite.visible = true;
+								}
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(black, {alpha: 0}, 1);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+							
+							trace("Dave House");
+	
+							dad.x = 50;
+							dad.y = 270;
+							health = 1;
+						case 1600:
+							switchDad('dave', dad.getPosition(), false);
+							dad.alpha = 0;
+							FlxTween.tween(dad, {alpha: 1}, 5);
+							FlxTween.tween(iconP2, {alpha: 1}, 5);
+						case 2176:
+							switchDad('dave-annoyed', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+						case 2752:
+							FlxTween.tween(dad, {alpha: 0}, 6);
+							FlxTween.tween(iconP2, {alpha: 0}, 6);
+						case 2823:
+							FlxTween.tween(black, {alpha: 5}, 1);
+							FlxTween.tween(camHUD, {alpha: 0}, 5);
+							makeInvisibleNotes(true);
+						case 2850:
+							for (sprite in daveHouseDream)
+								{
+									sprite.visible = false;
+								}
+							trace("Dave House is just a dream...");
+						// Tristan
+						case 2944:
+							for (sprite in tristanHouseDream)
+								{
+									sprite.visible = true;
+								}
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(black, {alpha: 0}, 1);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+							health = 1;
+							
+							trace("Tristan in Dave House!!!!!!!!!!!!!!!!!!!!");
+	
+							dad.x = 50;
+							dad.y = 500;
+						case 3008:
+							switchDad('tristan-opponent', dad.getPosition(), false);
+							dad.alpha = 0;
+							FlxTween.tween(dad, {alpha: 1}, 5);
+							FlxTween.tween(iconP2, {alpha: 1}, 5);
+						case 4160:
+							FlxTween.tween(dad, {alpha: 0}, 6);
+							FlxTween.tween(iconP2, {alpha: 0}, 6);
+						case 4192:
+							FlxTween.tween(black, {alpha: 5}, 1);
+							makeInvisibleNotes(true);
+							FlxTween.tween(camHUD, {alpha: 0}, 5);						
+						case 4352:
+							for (sprite in tristanHouseDream)
+								{
+									sprite.visible = false;
+								}
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(black, {alpha: 0}, 1);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+								
+							trace("Tristan is dead!!!!!!!!!!!!!!!!!!!!");
+		
+							dad.x = 0;
+							dad.y = 0;
+							health = 1;
+	
+							mcStarted = true;
+							cheatPart = true;
+						// Expunged
+						case 4416:
+							switchDad('bambi-3d', dad.getPosition(), false);
+							dad.alpha = 0;
+							FlxTween.tween(dad, {alpha: 1}, 5);
+							FlxTween.tween(iconP2, {alpha: 1}, 5);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+						case 5280:
+							FlxTween.tween(camHUD, {alpha: 0}, 5);
+							makeInvisibleNotes(true);
+							cheatPart = false;
+						// Expunged Unfair
+						case 5376:
+							switchDad('bambi-unfair', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
+							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
+							weirdBG.setPosition(0, 200);
+							health = 2;
+							unfairPart = true;
+	
+							dad.x = 0;
+							dad.y = 0;
+	
+							theFunne = true;
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+						case 5507:
+							defaultCamZoom += 0.2;
+							FlxTween.tween(black, {alpha: 0.6}, 1);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub1'), 0.02, 0.6);
+						case 5517:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub2'), 0.02, 0.6);
+						case 5535:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub3'), 0.02, 0.6);
+						case 5553:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub4'), 0.02, 1.5);
+						case 5583:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub5'), 0.02, 0.6);
+						case 5595:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub6'), 0.02, 1);
+						case 5609:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub7'), 0.02, 1);
+						case 5632:
+							defaultCamZoom -= 0.2;
+							FlxTween.tween(black, {alpha: 0}, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+						case 6448:
+							FlxTween.tween(dad, {alpha: 0}, 6);
+							FlxTween.tween(iconP2, {alpha: 0}, 6);
+						case 6497:
+							FlxTween.tween(black, {alpha: 5}, 1);
+							makeInvisibleNotes(true);
+							FlxTween.tween(camHUD, {alpha: 0}, 5);
+						// 3D Dave
+						case 6656:
+							for (sprite in daveHouseDream)
+								{
+									sprite.visible = false;
+								}
+							trace("Dave s back");
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(black, {alpha: 0}, 1);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+							dad.x = 50;
+							dad.y = 80;
+	
+							health = 1;
+							theFunne = false;
+							unfairPart = false;
+							mcStarted = false;
+						case 6688:
+							switchDad('dave-annoyed', dad.getPosition(), false);
+							dad.alpha = 0;
+							dad.x = 50;
+							dad.y = 270;
+							FlxTween.tween(dad, {alpha: 1}, 5);
+							FlxTween.tween(iconP2, {alpha: 1}, 5);
+						case 6784 | 6816 | 6848 | 6880:
+							FlxG.sound.play(Paths.sound('static'), 0.1);
+							switchDad('dave-angey', dad.getPosition(), false);
+							dad.x = 0;
+							dad.y = 0;
+	
+							weirdBG.loadGraphic(Paths.image('backgrounds/void/redsky'));
+							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));						
+						case 6788:
+							switchDad('dave-annoyed', dad.getPosition(), false);
+							dad.playAnim('um', true);
+							dad.x = 50;
+							dad.y = 270;
+							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
+							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
+						case 6821 | 6849 | 6881:
+							switchDad('dave-annoyed', dad.getPosition(), false);
+							dad.animation.play('scared', true);
+							dad.x = 50;
+							dad.y = 270;
+							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
+							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
+						case 6912:
+							FlxG.sound.play(Paths.sound('static'), 0.1);
+							switchDad('dave-angey', dad.getPosition(), false);
+							dad.x = 0;
+							dad.y = 0;
+	
+							weirdBG.loadGraphic(Paths.image('backgrounds/void/redsky'));
+							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
+	
+							shapeNoteWarning2 = new FlxSprite().loadGraphic(Paths.image("ui/shapeNoteWarning", 'shared'));
+							shapeNoteWarning2.antialiasing = false;
+							shapeNoteWarning2.scrollFactor.set();
+							shapeNoteWarning2.cameras = [camHUD];
+							shapeNoteWarning2.alpha = 0;
+							FlxTween.tween(shapeNoteWarning2, {alpha: 1}, 1);
+							add(shapeNoteWarning2);						
+						case 6944:
+							FlxTween.tween(shapeNoteWarning2, {alpha: 0}, 1);
+						case 7168 | 7296 | 7392 | 7680 | 7808 | 7904:
+							defaultCamZoom = 1.1;
+							shakeCam = true;
+							FlxG.camera.zoom += 0.2;
+	
+							if (localFunny != CharacterFunnyEffect.Recurser)
+								{
+									shakeCam = true;
+									pre3dSkin = boyfriend.curCharacter;
+									for (char in [boyfriend, gf])
+									{
+										if (char.skins.exists('3d'))
+										{
+											if (char == boyfriend)
+											{
+												switchBF(char.skins.get('3d'), char.getPosition());
+											}
+											else if (char == gf)
+											{
+												switchGF(char.skins.get('3d'), char.getPosition());
+											}
+										}
+									}
+								}
+						case 7232 | 7360 | 7424 | 7744 | 7872 | 7936:
+							defaultCamZoom = 0.9;
+							shakeCam = false;
+							FlxG.camera.zoom += 0.2;
+	
+							if (localFunny != CharacterFunnyEffect.Recurser)
+								{
+									if (boyfriend.curCharacter != pre3dSkin)
+									{
+										switchBF(pre3dSkin, boyfriend.getPosition());
+										switchGF(boyfriend.skins.get('gfSkin'), gf.getPosition());
+									}
+								}
+						case 8000:
+							FlxTween.tween(dad, {alpha: 0}, 6);
+							FlxTween.tween(iconP2, {alpha: 0}, 6);
+						case 8032:
+							FlxTween.tween(black, {alpha: 5}, 1);
+							makeInvisibleNotes(true);
+							FlxTween.tween(camHUD, {alpha: 0}, 5);
+						// Expunged True Form
+						case 8192:
+							defaultCamZoom = 0.5;
+							trace("Expunged true form lo");
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(black, {alpha: 0}, 1);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+							weirdBG.loadGraphic(Paths.image('backgrounds/void/exploit/creepyRoom'));
+							weirdBG.setGraphicSize(Std.int(weirdBG.width * 2));
+							weirdBG.setPosition(0, 200);
+							health = 1;
+							exploPart = true;
+							mcStarted = true;
+						case 8320:
+							switchDad('expunged', dad.getPosition(), false);
+							dad.alpha = 0;
+							FlxTween.tween(dad, {alpha: 1}, 5);
+							FlxTween.tween(iconP2, {alpha: 1}, 5);
+						case 8416:
+							defaultCamZoom += 0.2;
+							FlxTween.tween(black, {alpha: 0.6}, 1);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub8'), 0.02, 0.6);
+						case 8426:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub9'), 0.02, 0.6);
+						case 8432:
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub10'), 0.02, 0.6);
+						case 8448:
+							defaultCamZoom -= 0.2;
+							FlxTween.tween(black, {alpha: 0}, 1);
+							makeInvisibleNotes(false);
+							FlxTween.tween(camHUD, {alpha: 1}, 5);
+						case 8704 | 8736 | 8832 | 8864:
+							shakeCam = true;
+							FlxG.camera.zoom += 0.2;
+						case 8728 | 8760 | 8856 | 8888:
+							shakeCam = false;
+							FlxG.camera.zoom += 0.2;
+						case 9216:
+							defaultCamZoom = 0.9;
+							for (sprite in bambiFarmDream)
+							{
+								sprite.visible = true;
+							}
+							switchDad('bambi-mad', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+	
+							dad.x += 100;
+							dad.y += 500;
+						case 9280:
+							for (sprite in daveHouseDream)
+							{
+								sprite.visible = true;
+							}
+							for (sprite in bambiFarmDream)
+							{
+								sprite.visible = false;
+							}
+							switchDad('dave', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							dad.x = 50;
+							dad.y = 270;
+						case 9296:
+							for (sprite in daveHouseDream)
+							{
+								sprite.visible = false;
+							}
+							switchDad('dave-angey', dad.getPosition(), false);
+							FlxG.sound.play(Paths.sound('static'), 0.1);					
+						case 9344:
+							for (sprite in tristanHouseDream)
+							{
+								sprite.visible = true;
+							}
+							switchDad('tristan-opponent', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							dad.x = 50;
+							dad.y = 500;
+						case 9408:
+							for (sprite in tristanHouseDream)
+							{
+								sprite.visible = false;
+							}
+							switchDad('bambi-3d', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							cheatPart = true;
+							dad.x = 0;
+							dad.y = 0;						
+						case 9424:
+							switchDad('bambi-unfair', dad.getPosition(), false);
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+							cheatPart = false;
+							unfairPart = true;
+						case 9472:
+							defaultCamZoom = 0.5;
+							switchDad('expunged', dad.getPosition(), false);
+							unfairPart = false;
+							exploPart = true;
+							FlxG.camera.flash(FlxColor.WHITE, 1);
+	
+							shakeCam = true;
+							FlxG.camera.zoom += 0.2;
+	
+							modchart = ExploitationModchartType.Sex;
+							if (modchartoption) {
+								dadStrums.forEach(function(strum:StrumNote)
+								{
+									strum.resetX();
+								});
+								playerStrums.forEach(function(strum:StrumNote)
+								{
+									strum.resetX();
+								});
+							}
+	
+							windowProperties = [
+								Application.current.window.x,
+								Application.current.window.y,
+								Application.current.window.width,
+								Application.current.window.height
+							];
+	
+							#if windows
+							if (modchartoption) popupWindow();
+							#end
+						case 9504 | 9632:
+							shakeCam = true;
+							FlxG.camera.zoom += 0.2;
+						case 9528 | 9624 | 9656:
+							shakeCam = false;
+							FlxG.camera.zoom += 0.2;
+						case 9600:
+							shakeCam = true;
+							FlxG.camera.zoom += 0.2;
+	
+							modchart = ExploitationModchartType.Figure8;
+							if (modchartoption) {
+							dadStrums.forEach(function(strum:StrumNote)
+							{
+								strum.resetX();
+							});
+							playerStrums.forEach(function(strum:StrumNote)
+								{
+									strum.resetX();
+								});
+							}
+						case 9856:
+							#if windows
+							if (window != null)
+							{
+								window.close();
+								expungedWindowMode = false;
+								window = null;
+								FlxTween.tween(Application.current.window, {x: windowProperties[0], y: windowProperties[1], width: windowProperties[2], height: windowProperties[3]}, 1, {ease: FlxEase.circInOut});
+								FlxTween.tween(iconP2, {alpha: 0}, 1, {ease: FlxEase.bounceOut});
+							}
+							#end
+	
+							windowProperties = [
+								Application.current.window.x,
+								Application.current.window.y,
+								Application.current.window.width,
+								Application.current.window.height
+							];
+						case 9859:
+							PlatformUtil.sendWindowsNotification("ERROR", "expunged.dat is missing.");
+							FlxTween.tween(black, {alpha: 5}, 1);
+							FlxTween.tween(camHUD, {alpha: 0}, 5);
+					}
+				case 'old-importumania':
 					switch (curStep)
 					{
 						// Bambi
