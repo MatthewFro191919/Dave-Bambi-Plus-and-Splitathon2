@@ -10852,19 +10852,6 @@ class PlayState extends MusicBeatState
 						case 5507:
 							defaultCamZoom += 0.2;
 							FlxTween.tween(black, {alpha: 0.6}, 1);
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub1'), 0.02, 0.6);
-						case 5517:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub2'), 0.02, 0.6);
-						case 5535:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub3'), 0.02, 0.6);
-						case 5553:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub4'), 0.02, 1.5);
-						case 5583:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub5'), 0.02, 0.6);
-						case 5595:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub6'), 0.02, 1);
-						case 5609:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub7'), 0.02, 1);
 						case 5632:
 							defaultCamZoom -= 0.2;
 							FlxTween.tween(black, {alpha: 0}, 1);
@@ -10977,11 +10964,6 @@ class PlayState extends MusicBeatState
 						case 8416:
 							defaultCamZoom += 0.2;
 							FlxTween.tween(black, {alpha: 0.6}, 1);
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub8'), 0.02, 0.6);
-						case 8426:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub9'), 0.02, 0.6);
-						case 8432:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub10'), 0.02, 0.6);
 						case 8448:
 							defaultCamZoom -= 0.2;
 							FlxTween.tween(black, {alpha: 0}, 1);
