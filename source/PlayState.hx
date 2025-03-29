@@ -341,10 +341,10 @@ class PlayState extends MusicBeatState
 	var bambiFarmDream:Array<FlxSprite> = [];
 	var daveHouseDream:Array<FlxSprite> = [];
 	var tristanHouseDream:Array<FlxSprite> = [];
-
-	var 3dFarmDream1:Array<FlxSprite> = [];
-	var 3dFarmDream2:Array<FlxSprite> = [];
-	var 3dFarmDream3:Array<FlxSprite> = [];
+	var threedeeFarmDream1:Array<FlxSprite> = [];
+	var threedeeFarmDream2:Array<FlxSprite> = [];
+	var threedeeFarmDream3:Array<FlxSprite> = [];
+	var davethreedeeHouseDream:Array<FlxSprite> = [];
 
 
 	//bg stuff
@@ -2911,34 +2911,52 @@ class PlayState extends MusicBeatState
 				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyCheating', 'shared'), null);
 				add(Sky);
                                 Sky.setGraphicSize(Std.int(Sky.width * 3.1));
-				3dFarmDream1.push(Sky);
+				threedeeFarmDream1.push(Sky);
 		
 				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesCheating', 'shared'), null);
 				add(Shapes);
                                 Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
-				3dFarmDream1.push(Shapes);
+				threedeeFarmDream1.push(Shapes);
 						
 				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformCheating', 'shared'), null);
 				add(Platform);
                                 Platform.setGraphicSize(Std.int(Platform.width * 2.0));
-				3dFarmDream1.push(Platform);
+				threedeeFarmDream1.push(Platform);
 			}
 			if (SONG.song.toLowerCase() == "importumania") // 3d Bambi (Unfairness)
 			{
 				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyUnfairness', 'shared'), null);
 				add(Sky);
                                 Sky.setGraphicSize(Std.int(Sky.width * 3.1));
-				3dFarmDream2.push(Sky);
+				threedeeFarmDream2.push(Sky);
 		
 				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesUnfairness', 'shared'), null);
 				add(Shapes);
                                 Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
-				3dFarmDream2.push(Shapes);
+				threedeeFarmDream2.push(Shapes);
 						
 				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformUnfairness', 'shared'), null);
 				add(Platform);
                                 Platform.setGraphicSize(Std.int(Platform.width * 2.0));
-				3dFarmDream2.push(Platform);
+				threedeeFarmDream2.push(Platform);
+			}
+
+			if (SONG.song.toLowerCase() == "importumania") // 3d Dave
+			{
+				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyDave3D', 'shared'), null);
+				add(Sky);
+                                Sky.setGraphicSize(Std.int(Sky.width * 3.1));
+				davethreedeeHouseDream.push(Sky);
+		
+				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_ShapesDave3D', 'shared'), null);
+				add(Shapes);
+                                Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
+				davethreedeeHouseDream.push(Shapes);
+						
+				var Platform:BGSprite = new BGSprite('BGPlatform', -600, -750, Paths.image('backgrounds/importumania/Importumania_PlatformDave3D', 'shared'), null);
+				add(Platform);
+                                Platform.setGraphicSize(Std.int(Platform.width * 2.0));
+				davethreedeeHouseDream.push(Platform);
 			}
 
 			if (SONG.song.toLowerCase() == "importumania") // Expunged True Form
@@ -2946,17 +2964,17 @@ class PlayState extends MusicBeatState
 				var Sky:BGSprite = new BGSprite('BGSky', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyExpunged', 'shared'), null);
 				add(Sky);
                                 Sky.setGraphicSize(Std.int(Sky.width * 3.2, Sky.hight * 3));
-				3dFarmDream3.push(Sky);
+				threedeeFarmDream3.push(Sky);
 		
 				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_PlatformExpunged', 'shared'), null);
 				add(Shapes);
                                 Shapes.setGraphicSize(Std.int(Shapes.width * 3.1));
-				3dFarmDream3.push(Shapes);
+				threedeeFarmDream3.push(Shapes);
 						
 				var Shapes:BGSprite = new BGSprite('BGShapes', -3700, -2400, Paths.image('backgrounds/importumania/Importumania_SkyUnfairness', 'shared'), null);
 				add(Platform);
                                 Platform.setGraphicSize(Std.int(Platform.width * 2.0));
-				3dFarmDream3.push(Platform);
+				threedeeFarmDream3.push(Platform);
 			}
                         if (SONG.song.toLowerCase() == "old-importumania") // Bambi
 			{
@@ -10799,6 +10817,10 @@ class PlayState extends MusicBeatState
 						// Expunged
 						case 4416:
 							switchDad('bambi-3d', dad.getPosition(), false);
+							for (sprite in threedeeFarmDream1)
+							{
+								sprite.visible = true;
+							}
 							dad.alpha = 0;
 							FlxTween.tween(dad, {alpha: 1}, 5);
 							FlxTween.tween(iconP2, {alpha: 1}, 5);
@@ -10807,9 +10829,17 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(camHUD, {alpha: 0}, 5);
 							makeInvisibleNotes(true);
 							cheatPart = false;
+							for (sprite in threedeeFarmDream1)
+							{
+								sprite.visible = false;
+							}
 						// Expunged Unfair
 						case 5376:
 							switchDad('bambi-unfair', dad.getPosition(), false);
+							for (sprite in threedeeFarmDream2)
+							{
+								sprite.visible = true;
+							}
 							FlxG.camera.flash(FlxColor.WHITE, 1);
 							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
 							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
@@ -10852,9 +10882,9 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(camHUD, {alpha: 0}, 5);
 						// 3D Dave
 						case 6656:
-							for (sprite in daveHouseDream)
+							for (sprite in davethreedeeHouseDream)
 								{
-									sprite.visible = false;
+									sprite.visible = true;
 								}
 							trace("Dave s back");
 							FlxG.camera.flash(FlxColor.WHITE, 1);
