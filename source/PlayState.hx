@@ -10841,9 +10841,6 @@ class PlayState extends MusicBeatState
 								sprite.visible = true;
 							}
 							FlxG.camera.flash(FlxColor.WHITE, 1);
-							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
-							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
-							weirdBG.setPosition(0, 200);
 							health = 2;
 							unfairPart = true;
 	
@@ -10882,10 +10879,6 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(camHUD, {alpha: 0}, 5);
 						// 3D Dave
 						case 6656:
-							for (sprite in davethreedeeHouseDream)
-								{
-									sprite.visible = true;
-								}
 							trace("Dave s back");
 							FlxG.camera.flash(FlxColor.WHITE, 1);
 							makeInvisibleNotes(false);
@@ -10906,45 +10899,13 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(dad, {alpha: 1}, 5);
 							FlxTween.tween(iconP2, {alpha: 1}, 5);
 						case 6784 | 6816 | 6848 | 6880:
-							FlxG.sound.play(Paths.sound('static'), 0.1);
 							switchDad('dave-angey', dad.getPosition(), false);
 							dad.x = 0;
 							dad.y = 0;
-	
-							weirdBG.loadGraphic(Paths.image('backgrounds/void/redsky'));
-							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));						
-						case 6788:
-							switchDad('dave-annoyed', dad.getPosition(), false);
-							dad.playAnim('um', true);
-							dad.x = 50;
-							dad.y = 270;
-							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
-							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
-						case 6821 | 6849 | 6881:
-							switchDad('dave-annoyed', dad.getPosition(), false);
-							dad.animation.play('scared', true);
-							dad.x = 50;
-							dad.y = 270;
-							weirdBG.loadGraphic(Paths.image('backgrounds/void/scarybg'));
-							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
-						case 6912:
-							FlxG.sound.play(Paths.sound('static'), 0.1);
-							switchDad('dave-angey', dad.getPosition(), false);
-							dad.x = 0;
-							dad.y = 0;
-	
-							weirdBG.loadGraphic(Paths.image('backgrounds/void/redsky'));
-							weirdBG.setGraphicSize(Std.int(weirdBG.width * 3));
-	
-							shapeNoteWarning2 = new FlxSprite().loadGraphic(Paths.image("ui/shapeNoteWarning", 'shared'));
-							shapeNoteWarning2.antialiasing = false;
-							shapeNoteWarning2.scrollFactor.set();
-							shapeNoteWarning2.cameras = [camHUD];
-							shapeNoteWarning2.alpha = 0;
-							FlxTween.tween(shapeNoteWarning2, {alpha: 1}, 1);
-							add(shapeNoteWarning2);						
-						case 6944:
-							FlxTween.tween(shapeNoteWarning2, {alpha: 0}, 1);
+							for (sprite in davethreedeeHouseDream)
+								{
+									sprite.visible = true;
+								}				
 						case 7168 | 7296 | 7392 | 7680 | 7808 | 7904:
 							defaultCamZoom = 1.1;
 							shakeCam = true;
@@ -10992,19 +10953,24 @@ class PlayState extends MusicBeatState
 						// Expunged True Form
 						case 8192:
 							defaultCamZoom = 0.5;
-							trace("Expunged true form lo");
+							trace("Expunged true form lo");	
+                                                        for (sprite in davethreedeeHouseDream)
+							{
+								sprite.visible = false;
+							}
 							FlxG.camera.flash(FlxColor.WHITE, 1);
 							makeInvisibleNotes(false);
 							FlxTween.tween(black, {alpha: 0}, 1);
 							FlxTween.tween(camHUD, {alpha: 1}, 5);
-							weirdBG.loadGraphic(Paths.image('backgrounds/void/exploit/creepyRoom'));
-							weirdBG.setGraphicSize(Std.int(weirdBG.width * 2));
-							weirdBG.setPosition(0, 200);
 							health = 1;
 							exploPart = true;
 							mcStarted = true;
 						case 8320:
-							switchDad('expunged', dad.getPosition(), false);
+							switchDad('True_Expunged', dad.getPosition(), false);
+							for (sprite in threedeeFarmDream3)
+							{
+								sprite.visible = true;
+							}
 							dad.alpha = 0;
 							FlxTween.tween(dad, {alpha: 1}, 5);
 							FlxTween.tween(iconP2, {alpha: 1}, 5);
@@ -11318,19 +11284,19 @@ class PlayState extends MusicBeatState
 						case 5507:
 							defaultCamZoom += 0.2;
 							FlxTween.tween(black, {alpha: 0.6}, 1);
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub1'), 0.02, 0.6);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub1'), 0.02, 0.6);
 						case 5517:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub2'), 0.02, 0.6);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_old_sub2'), 0.02, 0.6);
 						case 5535:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub3'), 0.02, 0.6);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_old_sub3'), 0.02, 0.6);
 						case 5553:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub4'), 0.02, 1.5);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub4'), 0.02, 1.5);
 						case 5583:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub5'), 0.02, 0.6);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub5'), 0.02, 0.6);
 						case 5595:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub6'), 0.02, 1);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub6'), 0.02, 1);
 						case 5609:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub7'), 0.02, 1);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub7'), 0.02, 1);
 						case 5632:
 							defaultCamZoom -= 0.2;
 							FlxTween.tween(black, {alpha: 0}, 1);
@@ -11474,9 +11440,9 @@ class PlayState extends MusicBeatState
 						case 8416:
 							defaultCamZoom += 0.2;
 							FlxTween.tween(black, {alpha: 0.6}, 1);
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub8'), 0.02, 0.6);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub8'), 0.02, 0.6);
 						case 8426:
-							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub9'), 0.02, 0.6);
+							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_old_sub9'), 0.02, 0.6);
 						case 8432:
 							subtitleManager.addSubtitle(LanguageManager.getTextString('importumania_sub10'), 0.02, 0.6);
 						case 8448:
